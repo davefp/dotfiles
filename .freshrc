@@ -1,0 +1,22 @@
+fresh freshshell/fresh bin/fresh --bin
+
+fresh git/.git-completion.bash
+
+fresh bash/aliases
+
+fresh git/.gitconfig --file
+
+fresh mathiasbynens/dotfiles .bash_prompt
+
+fresh pengwynn/dotfiles bin/termcolors --bin
+
+# git
+fresh-options --file=~/.gitignore --marker
+  fresh github/gitignore Global/Archives.gitignore
+  fresh github/gitignore Global/IntelliJ.gitignore
+  fresh github/gitignore Global/OSX.gitignore
+  fresh github/gitignore Global/RubyMine.gitignore
+  fresh github/gitignore Global/vim.gitignore
+  fresh github/gitignore Rails.gitignore
+  fresh github/gitignore Ruby.gitignore
+fresh-options
