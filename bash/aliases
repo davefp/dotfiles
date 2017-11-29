@@ -24,8 +24,7 @@ bundler-help () {
   echo
 }
 
-# Sublime
-alias s='subl .'
+alias a.='atom .'
 
 # Heroku
 
