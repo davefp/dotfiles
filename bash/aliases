@@ -9,6 +9,8 @@ alias bu="bundle update"
 alias bp="bundle package"
 alias binit="bi && bp && echo 'vendor/ruby' >> .gitignore"
 
+alias dbscrub="bundle exec rake db:drop db:setup db:test:prepare"
+
 bundler-help () {
   echo "Bundler Aliases Usage"
   echo

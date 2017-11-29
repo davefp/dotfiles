@@ -1,9 +1,8 @@
 [user]
   name = David Underwood
-  email = davefp@gmail.com
 
 [core]
-  editor = subl -n -w
+  editor = atom --wait
   excludesfile = ~/.gitignore
 
 [color]
