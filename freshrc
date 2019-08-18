@@ -1,0 +1,11 @@
+# freshshell.com
+
+fresh freshshell/fresh bin/fresh --bin
+
+fresh git/.git-completion.bash
+
+fresh .bash_prompt
+
+fresh bash/aliases
+
+fresh vimrc --file
