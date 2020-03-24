@@ -7,7 +7,9 @@ endif
 
 syntax enable
 set autoindent
+set autoread
 set autowriteall
+set backspace=start
 set cindent
 set expandtab
 set ignorecase
@@ -24,8 +26,8 @@ set updatetime=100
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
 Plug 'dewyze/vim-ruby-block-helpers'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'posva/vim-vue'
@@ -42,8 +44,11 @@ let g:ale_linters = {'ruby': ['rubocop']}
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_set_highlights = 0
 let g:ale_sign_column_always = 1
+let g:dracula_inverse = 0
+let g:dracula_italic = 0
 
-colorscheme base16-dracula
+set termguicolors
+colorscheme dracula
 
 " Leader mappings
 nmap <Leader>v :edit ~/.vimrc <CR>
@@ -52,6 +57,7 @@ nmap <Leader>g :GFiles <CR>
 nmap <Leader>f :Files <CR>
 nmap <Leader>b :Buffers <CR>
 nmap <Leader>w :bd <CR>
+nmap <Leader>p :let @" = expand("%")<CR>
 
 " Other mappings
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
